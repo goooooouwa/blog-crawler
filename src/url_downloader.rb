@@ -5,11 +5,12 @@ require "json"
 require_relative "./logging"
 
 class URLDownloader
-  attr_accessor :max_retry_count
+  attr_accessor :max_retry_count, :sleep_in_seconds
 
   def initialize(save_file)
     @save_file = save_file
     @max_retry_count = 5
+    @sleep_in_seconds = 0
   end
 
   def save_page(url, retry_count = 0)
@@ -24,6 +25,8 @@ class URLDownloader
       Logging.logger.debug("skipping duplicate page: #{url}")
       return duplicates.first
     end
+
+    sleep(@sleep_in_seconds)
 
     res = Net::HTTP.get_response(URI(url))
     if res.is_a?(Net::HTTPSuccess)
