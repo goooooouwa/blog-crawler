@@ -30,7 +30,7 @@ when "page"
   pa_fr.start(config["initial_page"], config["direction"])
 when "post"
   po_fr = PostFetcher.new(Object.const_get("#{camel_case(blog_name)}Post"), config["posts_file"], config["pages_file"])
-  pa_fr.max_retry_count = config["max_retry_count"]
+  po_fr.max_retry_count = config["max_retry_count"]
   po_fr.sleep_in_seconds = config["sleep_in_seconds"]
   po_fr.start
 when "render"
