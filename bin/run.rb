@@ -34,7 +34,7 @@ when "post"
   po_fr.sleep_in_seconds = config["sleep_in_seconds"]
   po_fr.start
 when "render"
-  rdr = Renderer.new(config, config["remote_base_url"])
+  rdr = Renderer.new(config)
   rdr.posts_file = config["posts_file"]
   rdr.out_dir = config["out_dir"]
   rdr.slice = config["slice"]

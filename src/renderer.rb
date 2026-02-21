@@ -4,9 +4,8 @@ require "date"
 class Renderer
   attr_accessor :out_dir, :posts_file, :slice
 
-  def initialize(blog, remote_base_url)
+  def initialize(blog)
     @blog = blog
-    @remote_base_url = remote_base_url
     @out_dir = "./out"
     @posts_file = "./out/posts.json"
     @slice = 100
@@ -21,7 +20,6 @@ class Renderer
         rss_content.concat(render_rss_item_with_no_image(post))
       end
       rss_feed = render_rss_header(@blog) + rss_content + render_rss_footer
-      File.open("#{@out_dir}/feeds.txt", "a") { |file| file.write("#{@remote_base_url}/rss-#{index}.xml\n") }
       File.open("#{@out_dir}/rss-#{index}.xml", "w") { |file| file.write(rss_feed) }
     end
   end
