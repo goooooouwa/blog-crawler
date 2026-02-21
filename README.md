@@ -13,7 +13,7 @@ See examples of RSS feeds (`feeds.txt`, `rss-[0-9].xml`) & podcast URLs (`mp3-ur
 - [Mind Hacks](https://mindhacks.cn)
 - [White House Press Briefings](https://obamawhitehouse.archives.gov/photos-and-video/video/2017/01/13/11317-white-house-press-briefing?tid=7&x=10&y=11&page=0)
 
-## How to crawl websites and generate RSS feeds with blog_crawler
+## How to crawl websites and generate RSS feeds with Blog Crawler
 
 Let's use blog Coding Horror as an example.
 
