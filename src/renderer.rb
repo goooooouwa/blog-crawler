@@ -20,9 +20,9 @@ class Renderer
       slice.each do |post|
         rss_content.concat(render_rss_item_with_no_image(post))
       end
-      rss_slice_feed = render_rss_header(@blog) + rss_content + render_rss_footer
-      File.open("#{@out_dir}/feeds.txt", "a") { |file| file.write("#{@remote_base_url}/slice-#{index}.xml\n") }
-      File.open("#{@out_dir}/slice-#{index}.xml", "w") { |file| file.write(rss_slice_feed) }
+      rss_feed = render_rss_header(@blog) + rss_content + render_rss_footer
+      File.open("#{@out_dir}/feeds.txt", "a") { |file| file.write("#{@remote_base_url}/rss-#{index}.xml\n") }
+      File.open("#{@out_dir}/rss-#{index}.xml", "w") { |file| file.write(rss_feed) }
     end
   end
 
