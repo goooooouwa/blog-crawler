@@ -82,4 +82,4 @@ ruby ./bin/run.rb render coding_horror   # generate RSS feeds `rss-[0-9].xml` an
 
 ## What to do next?
 
-You can use [blog2kindle](https://github.com/goooooouwa/blog2kindle/tree/master) to turn RSS feeds into ebooks which can be read on ebook readers, such as Kindle, Apple Books. See how it works [here](https://github.com/goooooouwa/blog2kindle/blob/master/README.md).
+You can use [blog2kindle](https://github.com/goooooouwa/blog2kindle/tree/master) to turn these RSS feeds into ebooks which can be read on ebook readers, such as Kindle, Apple Books. See how it works [here](https://github.com/goooooouwa/blog2kindle/blob/master/README.md).
