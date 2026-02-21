@@ -17,7 +17,7 @@ class Renderer
     posts.sort_by { |hs| hs["published_date"] }.each_slice(@slice).with_index do |slice, index|
       rss_content = ""
       slice.each do |post|
-        rss_content.concat(render_rss_item_with_no_image(post))
+        rss_content.concat(render_rss_item_with_no_image(post, @blog))
       end
       rss_feed = render_rss_header(@blog) + rss_content + render_rss_footer
       File.open("#{@out_dir}/rss-#{index}.xml", "w") { |file| file.write(rss_feed) }
@@ -44,7 +44,7 @@ class Renderer
     HEADER
   end
 
-  def render_rss_item_with_no_image(rss_item)
+  def render_rss_item_with_no_image(rss_item, site)
     <<-ITEM
 <item>
 <title><![CDATA[ #{rss_item["title"]} ]]></title>
@@ -52,7 +52,7 @@ class Renderer
 <content><![CDATA[ #{rss_item["content"].gsub(/<img([\w\W]+?)[\/]?>/, '<img alt="image placeholder" >')} ]]></content>
 <pubDate>#{rss_item["published_date"]}</pubDate>
 <guid>#{rss_item["post_url"]}</guid>
-<author><![CDATA[ #{blog["author"]} ]]></author>
+<author><![CDATA[ #{site["author"]} ]]></author>
 </item>
     ITEM
   end
