@@ -76,7 +76,7 @@ ruby ./bin/run.rb post coding_horror  # will save posts found in pages.json as j
 ### 4. Generate RSS feeds from the crawled posts
 
 ```bash
-ruby ./bin/run.rb render coding_horror   # generate RSS feeds `rss-[0-9].xml` and a `feeds.txt` with their URLs under config["our_dir"] folder (each RSS feed has a set number of posts)
+ruby ./bin/run.rb render coding_horror   # generate RSS feeds `rss-[0-9].xml` under config["our_dir"] folder (each RSS feed has a set number of posts)
 ```
 
 ## What to do next?
