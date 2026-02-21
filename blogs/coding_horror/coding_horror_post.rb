@@ -7,6 +7,5 @@ class CodingHorrorPost < Post
     @title = post_html.css(".post-title").text
     @published_date = post_html.at("meta[property='article:published_time']")['content']
     @content = post_html.css(".post-content").children
-    @author = "Jeff Atwood"
   end
 end

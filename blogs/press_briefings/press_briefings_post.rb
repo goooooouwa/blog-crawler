@@ -13,6 +13,5 @@ class PressBriefingsPost < Post
     end
     mp3_download_link = post_html.css("#media-detail #video-info .download a").detect { |a| a.attributes["href"].value.include? "mp3" }
     @content = mp3_download_link.nil? ? nil : mp3_download_link.attributes["href"].value
-    @author = "the White House"
   end
 end

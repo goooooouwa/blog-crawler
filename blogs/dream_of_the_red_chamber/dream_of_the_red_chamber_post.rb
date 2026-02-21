@@ -7,6 +7,5 @@ class DreamOfTheRedChamberPost < Post
     @title = post_html.css(".article-title").text
     @published_date = '2010-09-01'
     @content = post_html.css(".article-content").children
-    @author = "韦岽（苟守庆）"
   end
 end

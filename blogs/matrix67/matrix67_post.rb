@@ -8,6 +8,5 @@ class Matrix67Post < Post
     @title = post_html.css(".entry-title").text
     @published_date = post_html.css(".entry-date").first.attributes["datetime"].value
     @content = post_html.css(".entry-content").children
-    @author = "顾森"
   end
 end

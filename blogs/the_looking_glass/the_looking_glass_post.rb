@@ -13,6 +13,5 @@ class TheLookingGlassPost < Post
       end
     end
     @content = post_html.css(".available-content").children
-    @author = "Julie Zhuo"
   end
 end

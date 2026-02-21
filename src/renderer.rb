@@ -52,7 +52,7 @@ class Renderer
 <content><![CDATA[ #{rss_item["content"].gsub(/<img([\w\W]+?)[\/]?>/, '<img alt="image placeholder" >')} ]]></content>
 <pubDate>#{rss_item["published_date"]}</pubDate>
 <guid>#{rss_item["post_url"]}</guid>
-<author><![CDATA[ #{rss_item["author"]} ]]></author>
+<author><![CDATA[ #{blog["author"]} ]]></author>
 </item>
     ITEM
   end

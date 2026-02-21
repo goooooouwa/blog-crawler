@@ -19,7 +19,6 @@ class MaccastPage < Page
         title: post_html.css(".postheadline .h2").text,
         published_date: DateTime.parse(post_url.match(/[0-9]{4}\/[0-9]{2}\/[0-9]{2}/)[0]),
         content: post_html.css(".entry").children,
-        author: "Adam Christianson",
       }
     end
   end
