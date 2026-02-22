@@ -17,9 +17,15 @@ See examples of RSS feeds (`rss-[0-9].xml`) & podcast URLs (`mp3-urls.txt`) gene
 
 Let's use blog Coding Horror as an example.
 
-### 1. Create custom page and post objects along with `config.json` for the website
+### 1. Create custom page and post classes along with `config.json` for the website
 
-Coding Horror page and post object:
+#### Page class
+
+A page class represents a webpage which includes the following information:
+- either a URL to the next page or the previous page
+- URLs to one or more blog posts
+
+Example page class:
 
 ```ruby
 # blogs/coding_horror/coding_horror_page.rb
@@ -33,7 +39,19 @@ class CodingHorrorPage < Page
     @post_urls = [@page_url]
   end
 end
+```
 
+#### Post class
+
+A post class represents a webpage which includes the following information:
+- article title
+- article published date 
+- article content
+- (optional) article author 
+
+Example post class:
+
+```ruby
 # blogs/coding_horror/coding_horror_posts.rb
 class CodingHorrorPost < Post
   def initialize(post_url, post_html)
