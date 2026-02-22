@@ -61,6 +61,7 @@ class CodingHorrorPost < Post
     @title = post_html.css(".post-title").text
     @published_date = post_html.at("meta[property='article:published_time']")['content']
     @content = post_html.css(".post-content").children
+    @author = post_html.css(".gh-article-author-name a").text
   end
 end
 ```
@@ -74,8 +75,8 @@ Config file:
   "author": "Jeff Atwood",
   "description": "programming and human factors",
   "homepage": "https://blog.codinghorror.com",
+  "initial_page": "https://blog.codinghorror.com/building-a-pc-part-ix-downsizing/",
   "direction": "previous",
-  "initial_page": "https://blog.codinghorror.com/building-a-pc-part-ix-downsizing/"
 }
 ```
 
