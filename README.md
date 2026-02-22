@@ -22,8 +22,10 @@ Let's use blog Coding Horror as an example.
 #### Page class
 
 A page class represents a webpage which has the following information:
-- either a URL to the next page or the previous page
+- URL to the next or previous page
 - URLs to one or more blog posts
+
+A page can be a blog index page with a list of posts or a single blog post, with links to the next or previous page.
 
 Example page class:
 
