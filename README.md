@@ -21,7 +21,7 @@ Let's use blog Coding Horror as an example.
 
 #### Page class
 
-A page class represents a webpage which includes the following information:
+A page class represents a webpage which has the following information:
 - either a URL to the next page or the previous page
 - URLs to one or more blog posts
 
@@ -43,7 +43,7 @@ end
 
 #### Post class
 
-A post class represents a webpage which includes the following information:
+A post class represents a webpage which has the following information:
 - article title
 - article published date 
 - article content
