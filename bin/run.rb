@@ -22,6 +22,8 @@ def camel_case(string)
   string.capitalize.gsub(/_(\w)/) { $1.upcase }
 end
 
+puts "Check ./fetch.log for detailed progress..."
+
 case command
 when "page"
   pa_fr = PageFetcher.new(Object.const_get("#{camel_case(blog_name)}Page"), config["pages_file"])
@@ -33,7 +35,7 @@ when "post"
   po_fr = PostFetcher.new(Object.const_get("#{camel_case(blog_name)}Post"), config["posts_file"], config["pages_file"])
   po_fr.max_retry_count = config["max_retry_count"]
   po_fr.sleep_in_seconds = config["sleep_in_seconds"]
-  pa_fr.headers = config["headers"]
+  po_fr.headers = config["headers"]
   po_fr.start
 when "render"
   rdr = Renderer.new(config)
