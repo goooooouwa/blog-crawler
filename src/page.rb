@@ -13,6 +13,7 @@ class Page
       previous_page_url: @previous_page_url,
       next_page_url: @next_page_url,
       post_urls: @post_urls,
+      posts: @posts || [],
     }.to_json
   end
 end
