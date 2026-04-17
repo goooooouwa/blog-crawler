@@ -3,6 +3,23 @@
     "author": "Goooooouwa",
     "description": "programming and human factors",
     "homepage": "https://movie.douban.com/people/goooooouwa/wish",
-    "direction": "previous",
-    "initial_page": "https://movie.douban.com/people/goooooouwa/wish?start=0&sort=time&type=all&filter=all&mode=list"
+    "direction": "next",
+    "initial_page": "https://movie.douban.com/people/goooooouwa/wish?start=0&sort=time&type=all&filter=all&mode=list",
+    "headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+        "accept-language": "zh-CN,zh;q=0.5",
+        "cache-control": "max-age=0",
+        "cookie": "bid=L4hGsTGBeOY; ll=\"108258\"; _vwo_uuid_v2=DC6CFB9DFABDD8BA5755BB7D870AB8F6C|9807bc12f108a4ff881f5addf23be4a0; ap_v=0,6.0; dbcl2=\"57003827:be23GFa1LF0\"; ck=Hi98; push_noty_num=0; push_doumail_num=0; frodotk_db=\"bcaf61f29a0c9ecc360e25d7ce25dc64\"",
+        "priority": "u=0, i",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Brave\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1",
+        "sec-gpc": "1",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+    }
 }
