@@ -2,9 +2,9 @@
     "title": "Douban",
     "author": "Goooooouwa",
     "description": "programming and human factors",
-    "homepage": "https://movie.douban.com/people/goooooouwa/wish",
+    "homepage": "https://movie.douban.com/people/goooooouwa/collect",
     "direction": "next",
-    "initial_page": "https://movie.douban.com/people/goooooouwa/wish?start=0&sort=time&type=all&filter=all&mode=list",
+    "initial_page": "https://movie.douban.com/people/goooooouwa/collect?start=0&sort=time&type=all&filter=all&mode=list",
     "headers": {
         "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
         "accept-language": "zh-CN,zh;q=0.5",
