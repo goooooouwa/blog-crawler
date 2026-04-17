@@ -29,13 +29,13 @@ when "page"
   pa_fr = PageFetcher.new(Object.const_get("#{camel_case(blog_name)}Page"), config["pages_file"])
   pa_fr.max_retry_count = config["max_retry_count"]
   pa_fr.sleep_in_seconds = config["sleep_in_seconds"]
-  pa_fr.headers = config["headers"]
+  pa_fr.headers = config["headers"] unless config["headers"].nil?
   pa_fr.start(config["initial_page"], config["direction"])
 when "post"
   po_fr = PostFetcher.new(Object.const_get("#{camel_case(blog_name)}Post"), config["posts_file"], config["pages_file"])
   po_fr.max_retry_count = config["max_retry_count"]
   po_fr.sleep_in_seconds = config["sleep_in_seconds"]
-  po_fr.headers = config["headers"]
+  po_fr.headers = config["headers"] unless config["headers"].nil?
   po_fr.start
 when "render"
   rdr = Renderer.new(config)
